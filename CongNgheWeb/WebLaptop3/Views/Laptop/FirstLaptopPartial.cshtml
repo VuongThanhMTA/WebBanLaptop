@@ -1,0 +1,42 @@
+﻿<!--PartialViews-->
+
+@using WebLaptop3.Models.Data;
+@model List<Laptop>
+
+
+
+<!-- SECTION -->
+<div class="section">
+    <!-- container -->
+    <div class="container">
+
+        <div class="section-title">
+            <h3 class="title">Hot Laptop</h3>
+        </div>
+        <!-- row -->
+        <div class="row">
+            <!-- shop -->
+            @{
+                foreach (var item in Model)
+                {                  
+                    <div class="FirstLaptop">                     
+                        <div class="shopFL">
+                            <div class="shop-img">
+                                <img src="~/Content/Admin/img/@item.Anh"/>
+                            </div>
+                            <div class="shop-body">
+                               <h3>@item.TenLaptop<br></h3> 
+                                <a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            <!-- /shop -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /SECTION -->
+
