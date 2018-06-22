@@ -1,4 +1,4 @@
-namespace WebLaptop3.Models.Data
+namespace WebLaptop3.Models.NewData
 {
     using System;
     using System.Collections.Generic;

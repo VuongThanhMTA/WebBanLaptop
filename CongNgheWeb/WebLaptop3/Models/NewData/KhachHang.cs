@@ -1,4 +1,4 @@
-namespace WebLaptop3.Models.Data
+namespace WebLaptop3.Models.NewData
 {
     using System;
     using System.Collections.Generic;
@@ -16,9 +16,9 @@ namespace WebLaptop3.Models.Data
         }
 
         [Key]
-        [StringLength(15)]
-        public string MaKhachHang { get; set; }
+        public int MaKhachHang { get; set; }
 
+        [Required]
         [StringLength(50)]
         public string TenKhachHang { get; set; }
 

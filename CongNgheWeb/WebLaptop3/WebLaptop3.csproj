@@ -177,15 +177,15 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Data\ChiTietHoaDon.cs" />
-    <Compile Include="Models\Data\HoaDon.cs" />
-    <Compile Include="Models\Data\KhachHang.cs" />
-    <Compile Include="Models\Data\Laptop.cs" />
-    <Compile Include="Models\Data\LoaiLaptop.cs" />
-    <Compile Include="Models\Data\NhaCungCap.cs" />
-    <Compile Include="Models\Data\QuanLyBanLaptopModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\NewData\ChiTietHoaDon.cs" />
+    <Compile Include="Models\NewData\HoaDon.cs" />
+    <Compile Include="Models\NewData\KhachHang.cs" />
+    <Compile Include="Models\NewData\Laptop.cs" />
+    <Compile Include="Models\NewData\LoaiLaptop.cs" />
+    <Compile Include="Models\NewData\NhaCungCap.cs" />
+    <Compile Include="Models\NewData\QuanLyLaptopModel1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -309,6 +309,7 @@
     <Content Include="Views\Laptop\demoPartial.cshtml" />
     <Content Include="Views\DangKyDangNhap\DangKy1.cshtml" />
     <Content Include="Views\Laptop\AllLaptopPartial.cshtml" />
+    <Content Include="Views\Laptop\DetailLaptop.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,14 +1,14 @@
-namespace WebLaptop3.Models.Data
+namespace WebLaptop3.Models.NewData
 {
     using System;
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class QuanLyBanLaptopModel : DbContext
+    public partial class QuanLyLaptopModel1 : DbContext
     {
-        public QuanLyBanLaptopModel()
-            : base("name=QuanLyBanLaptopModel1")
+        public QuanLyLaptopModel1()
+            : base("name=QuanLyLaptopModel1")
         {
         }
 
@@ -34,17 +34,9 @@ namespace WebLaptop3.Models.Data
                 .IsUnicode(false);
 
             modelBuilder.Entity<HoaDon>()
-                .Property(e => e.MaKhachHang)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<HoaDon>()
                 .HasMany(e => e.ChiTietHoaDons)
                 .WithRequired(e => e.HoaDon)
                 .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<KhachHang>()
-                .Property(e => e.MaKhachHang)
-                .IsUnicode(false);
 
             modelBuilder.Entity<KhachHang>()
                 .Property(e => e.SDT)

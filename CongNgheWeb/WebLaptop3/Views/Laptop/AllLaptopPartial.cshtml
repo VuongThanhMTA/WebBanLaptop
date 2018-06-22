@@ -1,5 +1,5 @@
 ﻿
-@using WebLaptop3.Models.Data;
+@using WebLaptop3.Models.NewData;
 @model List<Laptop>
 
 @{
@@ -19,7 +19,7 @@
             <div id="aside" class="col-md-3">
                 <!-- aside Widget -->
                 <div class="aside">
-                    <h3 class="aside-title">Categories</h3>
+                    <h3 class="aside-title">Danh mục</h3>
                     <div class="checkbox-filter">
 
                         <div class="input-checkbox">
@@ -87,30 +87,42 @@
                 <!-- store products -->
                 <div class="row">
                     <!-- product -->
-                   
-                        @foreach (var item in Model)
-                        {
-                            <div class="product" style="float:left ; width:20%; height:28%;margin-right:10px;margin-bottom:0px">
-                                <div class="product-img" >
-                                    <img src="@Url.Content("~/Content/Admin/img/"+item.Anh)" alt="">
-                                </div>
-                                <div class="product-body">
-                                   
-                                    <h3 class="product-name"><a href="#">@item.TenLaptop</a></h3>
-                                    <h4 class="product-price"> <del class="product-old-price">@item.Gia vnd</del></h4>
-                                 
-                                    @*<div class="product-btns">
+
+                    @foreach (var item in Model)
+                    {
+
+
+                        <div class="product" style="float:left ; width:150px; height:250px;margin-right:10px;margin-bottom:50px">
+                            <div class="product-img">
+                             <a href="@Url.Action("DetailLaptop","Laptop", new {@MaLaptop = @item.MaLaptop })">  <img src="@Url.Content("~/Content/Admin/img/"+item.Anh)" width = "150" height = "100"></a>
+                            </div>
+                            <div class="product-body">
+
+                                <h6 class="product-name">
+                                    @if (item.TenLaptop.Length > 14)
+                                    {
+                                        <a href="#">@item.TenLaptop.Substring(0, 9)...</a>
+                                    }
+                                    else
+                                    {
+                                        <a href="#">@item.TenLaptop</a>
+                                    }
+
+                                </h6>
+                                <h6 class="product-price"> @item.Gia vnd</h6>
+
+                                @*<div class="product-btns">
                                         <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
                                         <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
                                         <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Xem Chi Tiết</span></button>
                                     </div>*@
-                                </div>
-                                <div class="add-to-cart" >
-                                    <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-                                </div>
                             </div>
-                        }
-                  
+                            <div class="add-to-cart" style="width:150px;height:50px;margin-bottom:20px">
+                                <button class="add-to-cart-btn" style=""><i class="fa fa-shopping-cart"></i> Mua</button>
+                            </div>
+                        </div>
+                    }
+
                     <!-- /product -->
                 </div>
 

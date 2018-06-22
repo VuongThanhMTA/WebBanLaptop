@@ -1,4 +1,4 @@
-namespace WebLaptop3.Models.Data
+namespace WebLaptop3.Models.NewData
 {
     using System;
     using System.Collections.Generic;
@@ -6,36 +6,45 @@ namespace WebLaptop3.Models.Data
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("HoaDon")]
-    public partial class HoaDon
+    [Table("Laptop")]
+    public partial class Laptop
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public HoaDon()
+        public Laptop()
         {
             ChiTietHoaDons = new HashSet<ChiTietHoaDon>();
         }
 
         [Key]
         [StringLength(15)]
-        public string MaHoaDon { get; set; }
-
-        [StringLength(15)]
-        public string MaKhachHang { get; set; }
-
-        [Column(TypeName = "date")]
-        public DateTime? NgayDatHang { get; set; }
-
-        [Column(TypeName = "date")]
-        public DateTime? NgayGiaoHang { get; set; }
+        public string MaLaptop { get; set; }
 
         [StringLength(50)]
-        public string TinhTrang { get; set; }
+        public string TenLaptop { get; set; }
 
-        public int? DaThanhToan { get; set; }
+        [StringLength(15)]
+        public string MaLoaiLaptop { get; set; }
+
+        public int? Gia { get; set; }
+
+        public int? SoLuong { get; set; }
+
+        [StringLength(50)]
+        public string Anh { get; set; }
+
+        [StringLength(15)]
+        public string MaNhaCungCap { get; set; }
+
+        [StringLength(50)]
+        public string Mota { get; set; }
+
+        public int? TrangThai { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }
 
-        public virtual KhachHang KhachHang { get; set; }
+        public virtual LoaiLaptop LoaiLaptop { get; set; }
+
+        public virtual NhaCungCap NhaCungCap { get; set; }
     }
 }

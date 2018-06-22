@@ -1,4 +1,4 @@
-﻿@using WebLaptop3.Models.Data;
+﻿@using WebLaptop3.Models.NewData;
 @model List<Laptop>
 
 @{
@@ -16,7 +16,9 @@
         </div>
         <div class="product-body">
             <p class="product-category">Category</p>
-            <h3 class="product-name"><a href="#">@item.TenLaptop</a></h3>
+            <h3 class="product-name">
+            <a href="#">@item.TenLaptop</a>
+            </h3>
             <h4 class="product-price"> @item.Gia vnd </h4>
             <div class="product-rating">
                 <i class="fa fa-star"></i>

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using WebLaptop3.Models.Data;
+using WebLaptop3.Models.NewData;
 
 namespace WebLaptop3.Controllers
 {
     public class DangKyDangNhapController : Controller
     {
-        QuanLyBanLaptopModel db = new QuanLyBanLaptopModel();
+        QuanLyLaptopModel1 db = new QuanLyLaptopModel1();
 
         // GET: DangKyDangNhap
         public ActionResult Index()

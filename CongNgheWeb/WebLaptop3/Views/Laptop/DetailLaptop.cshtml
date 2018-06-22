@@ -1,0 +1,34 @@
+﻿@model WebLaptop3.Models.NewData.Laptop
+
+
+@{
+    ViewBag.Title = "DetailLaptop";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<h2 style="color:black;padding-left:45%"> Chi tiết sản phẩm </h2>*@
+
+<div class="ChiTietSanPham">
+    <div class="ThongTin col-sm-6">
+        <div class="imgSanPham col-sm-6">
+            <img src="@Url.Content("~/Content/Admin/img/"+Model.Anh)" width="150" height="200" />
+        </div>
+        <div class="TenSanPham col-sm-6" style="margin-top:5%">
+            <h4>Sản phẩm: @Model.TenLaptop<br></h4>
+            <h4>Mô tả: @Model.Mota<br></h4>
+            <h3>Hãng: @Model.LoaiLaptop.TenLoaiLaptop<br></h3>
+            <h4>Giá: @Model.Gia<br></h4>
+            <button class="btnMua", style="width:100px; height:30px;background-color:sandybrown">
+                Mua
+            </button>
+        </div>
+    </div>
+    <div>
+
+    </div>
+</div>
+<div style="clear:both"></div>
+@*<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaLaptop }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@

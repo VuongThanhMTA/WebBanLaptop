@@ -1,91 +1,91 @@
 ﻿
-.DangKyDangNhap{
-    float:right;
+.DangKyDangNhap {
+    float: right;
 }
-/* khi di chuột vào đăng ký đăng nhập*/
-.DangKyDangNhap a:hover {
-    text-decoration:none;
-    color:red;
-} 
+    /* khi di chuột vào đăng ký đăng nhập*/
+    .DangKyDangNhap a:hover {
+        text-decoration: none;
+        color: red;
+    }
 
-.DangKyDangNhap li{
-    display:inline;
-    text-decoration:none;
-}
+    .DangKyDangNhap li {
+        display: inline;
+        text-decoration: none;
+    }
 
-.Email-SDT{
-    float:left;
-}
-
-#divDanhMuc{
-    float:right;
+.Email-SDT {
+    float: left;
 }
 
-.navMenu li{
-    display:inline;
+#divDanhMuc {
+    float: right;
 }
-.navMenu a:hover{
-    text-decoration:none;
+
+.navMenu li {
+    display: inline;
+}
+
+.navMenu a:hover {
+    text-decoration: none;
 }
 
 /*css form đăng nhập đăng ký*/
 .input-DKDN {
     height: 35px;
     padding: 0px 15px;
-    margin:5px 40px;
-    border: 2px solid #E4E7ED;
-    background-color: #FFF;
-    width: 30%;
-}
-.input-TenDN {
-    height: 35px;
-    padding: 0px 15px;
-    margin:5px 5px;
+    margin: 5px 40px;
     border: 2px solid #E4E7ED;
     background-color: #FFF;
     width: 30%;
 }
 
-.submitTaoTK{
+.input-TenDN {
+    height: 35px;
+    padding: 0px 15px;
+    margin: 5px 5px;
+    border: 2px solid #E4E7ED;
+    background-color: #FFF;
+    width: 30%;
+}
+
+.submitTaoTK {
     height: 30px;
     padding: 5px 0px;
-    margin-left:150px;
+    margin-left: 150px;
     border: 2px solid #E4E7ED;
     background-color: #65c23e;
     width: 12%;
 }
 
-.group-textDangKy{
-  
-    float:left;
+.group-textDangKy {
+    float: left;
 }
-.group-inputDangKy{
 
+.group-inputDangKy {
 }
+
 .form-groupDKDN {
-    width :100%;
+    width: 100%;
     margin-left: 25%;
-   
 }
 
 .form-groupDangKy {
-    width :100%;
+    width: 100%;
     margin-left: 25%;
     margin-right: 25%;
-   
 }
 
 .section-DKDN {
-  position: relative;
-  margin-bottom: 30px;
-  margin-top: 15px;
+    position: relative;
+    margin-bottom: 30px;
+    margin-top: 15px;
 }
 
-.section-DKDN .title {
-    display: inline-block;
-    text-transform: uppercase;
-    margin-left: 25%;
-}
+    .section-DKDN .title {
+        display: inline-block;
+        text-transform: uppercase;
+        margin-left: 25%;
+    }
 
 
 
@@ -112,26 +112,50 @@
 
 /*Css FirstLaptop 3  ảnh đầu tiên */
 
-.FirstLaptop{
-    float:left;
-    height:30%;
-    width:30%;
+.FirstLaptop {
+    float: left;
+    height: 30%;
+    width: 30%;
     margin: 0px 10px;
 }
 
-.shopFL{
+.shopFL {
     position: relative;
     overflow: hidden;
     margin: 15px 0px;
 }
 
-.FirstLaptop .shop.shop-img>img{
-    width:10%;
-     height:100%;
+.FirstLaptop .shop.shop-img > img {
+    width: 10%;
+    height: 100%;
 }
 
 /*CSS Sản phẩm*/
-.SanPham{
+
+.ChiTietSanPham {
+    
+    margin-left: 100px;
+    height: 300px;
+    width: 90%;
+}
+
+.ChiTietSanPham.imgSanPham {
+    
+    
+    margin-left: 15px;
+    margin-right: 20px;
+}
+
+.ChiTietSanPham.TenSanPham {
+   margin-top:30px;
+    margin-left: 15px;
+    margin-right: 20px;
+}
+
+
+
+
+/*.SanPham{
     float:left;
     width:50%;
 }
@@ -326,4 +350,4 @@
 .SanPham .add-to-cart .add-to-cart-btn:hover>i {
   opacity: 1;
   visibility: visible;
-}
+}*/
