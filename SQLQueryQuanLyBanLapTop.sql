@@ -42,6 +42,9 @@ CREATE TABLE KhachHang
 	TaiKhoan VARCHAR(30),
 	MatKhau NVARCHAR(30)
 )
+GO 
+ALTER TABLE dbo.KhachHang
+ADD  MaKhachHang  int IDENTITY(1,1)
 
 GO 
 CREATE TABLE HoaDon(
@@ -110,3 +113,39 @@ VALUES  ('5',N'Apple Macbook Air','4',35000000,10,'AppleMacbookAir.jpg','4',N'Ai
 INSERT dbo.Laptop( MaLaptop ,TenLaptop ,MaLoaiLaptop ,Gia ,SoLuong,Anh ,MaNhaCungCap, Mota)
 VALUES  ('6',N'Apple Macbook Pro','4',35000000,10,'AppleMacbookPro.jpg','4',N'Pro MPXR2SA/A i5  (2017)')
 
+GO 
+UPDATE dbo.Laptop SET TrangThai =1
+
+GO 
+INSERT dbo.Laptop( MaLaptop ,TenLaptop ,MaLoaiLaptop ,Gia ,SoLuong,Anh ,MaNhaCungCap, Mota,TrangThai)
+VALUES  ('7',N'Asus UX430UQ','1',15000000,10,'_Laptop Asus UX430UQ -9.jpg','1',N'_Laptop Asus UX430UQ -9',1)
+INSERT dbo.Laptop( MaLaptop ,TenLaptop ,MaLoaiLaptop ,Gia ,SoLuong,Anh ,MaNhaCungCap, Mota,TrangThai)
+VALUES  ('8',N'Asus Zenbook UX41','1',16000000,10,'asus_zenbook_ux410_review05_thumb1200_4-3.jpg','1',N'asus_zenbook_ux410_review05_thumb1200_4-3',1)
+INSERT dbo.Laptop( MaLaptop ,TenLaptop ,MaLoaiLaptop ,Gia ,SoLuong,Anh ,MaNhaCungCap, Mota,TrangThai)
+VALUES  ('9',N'dell-vostro','2',15500000,10,'dell-vostro.jpg','2',N'dell-vostro-5468-p75g001-vangdong-3-1',1)
+INSERT dbo.Laptop( MaLaptop ,TenLaptop ,MaLoaiLaptop ,Gia ,SoLuong,Anh ,MaNhaCungCap, Mota,TrangThai)
+VALUES  ('10',N'dell 1570000','2',15900000,10,'dell1570000.jpg','2',N'dell1570000',1)
+INSERT dbo.Laptop( MaLaptop ,TenLaptop ,MaLoaiLaptop ,Gia ,SoLuong,Anh ,MaNhaCungCap, Mota,TrangThai)
+VALUES  ('11',N'dell-inspiron-15-i15r','2',15900000,10,'dell-inspiron-15-i15rv-6190-blk.jpg','2',N'dell-inspiron-15-i15rv-6190-blk',1)
+INSERT dbo.Laptop( MaLaptop ,TenLaptop ,MaLoaiLaptop ,Gia ,SoLuong,Anh ,MaNhaCungCap, Mota,TrangThai)
+VALUES  ('13',N'dellxps12','2',15900000,10,'dellxps12.jpg','2',N'dellxps12',1)
+INSERT dbo.Laptop( MaLaptop ,TenLaptop ,MaLoaiLaptop ,Gia ,SoLuong,Anh ,MaNhaCungCap, Mota,TrangThai)
+VALUES  ('12',N'dell-vostro-v5468i5','2',15900000,10,'dell-vostro-v5468i5-7200u-1.jpg','2',N'dell-vostro-v5468i5-7200u-1',1)
+INSERT dbo.Laptop( MaLaptop ,TenLaptop ,MaLoaiLaptop ,Gia ,SoLuong,Anh ,MaNhaCungCap, Mota,TrangThai)
+VALUES  ('14',N'hp14bs561tu','3',12000000,10,'hp14bs561tu.jpg','3',N'hp14bs561tu',1)
+INSERT dbo.Laptop( MaLaptop ,TenLaptop ,MaLoaiLaptop ,Gia ,SoLuong,Anh ,MaNhaCungCap, Mota,TrangThai)
+VALUES  ('15',N'hp2018best','3',15900000,10,'hp2018bestk.jpg','3',N'hp2018best',1)
+INSERT dbo.Laptop( MaLaptop ,TenLaptop ,MaLoaiLaptop ,Gia ,SoLuong,Anh ,MaNhaCungCap, Mota,TrangThai)
+VALUES  ('16',N'hppavilion15','3',15900000,10,'hppavilion15.jpg','3',N'hp pavilion 15',1)
+INSERT dbo.Laptop( MaLaptop ,TenLaptop ,MaLoaiLaptop ,Gia ,SoLuong,Anh ,MaNhaCungCap, Mota,TrangThai)
+VALUES  ('17',N'macbook air 99','4',35000000,10,'macbook-air99.jpg','4',N'macbook-air99',1)
+INSERT dbo.Laptop( MaLaptop ,TenLaptop ,MaLoaiLaptop ,Gia ,SoLuong,Anh ,MaNhaCungCap, Mota,TrangThai)
+VALUES  ('18',N'macbook-pro-15','4',35000000,10,'macbook-pro-15.jpg','4',N'macbook-pro-15',1)
+INSERT dbo.Laptop( MaLaptop ,TenLaptop ,MaLoaiLaptop ,Gia ,SoLuong,Anh ,MaNhaCungCap, Mota,TrangThai)
+VALUES  ('19',N'macbook-pro-windows-3','4',35000000,10,'macbook-pro-windows-3.jpg','4',N'macbook-pro-windows-3',1)
+INSERT dbo.Laptop( MaLaptop ,TenLaptop ,MaLoaiLaptop ,Gia ,SoLuong,Anh ,MaNhaCungCap, Mota,TrangThai)
+VALUES  ('20',N'lenovo500s','5',35000000,10,'lenovo500s.jpg','5',N'lenovo500s',1)
+INSERT dbo.Laptop( MaLaptop ,TenLaptop ,MaLoaiLaptop ,Gia ,SoLuong,Anh ,MaNhaCungCap, Mota,TrangThai)
+VALUES  ('21',N'Sony_SVE14112FX','5',35000000,10,'Sony_SVE14112FX.jpg','5',N'Sony_SVE14112FX',1)
+INSERT dbo.Laptop( MaLaptop ,TenLaptop ,MaLoaiLaptop ,Gia ,SoLuong,Anh ,MaNhaCungCap, Mota,TrangThai)
+VALUES  ('22',N'Sonny vaio','5',35000000,10,'sonnywo.jpg','5',N'sonny vaio',1)

@@ -20,9 +20,9 @@
                 foreach (var item in Model)
                 {                  
                     <div class="FirstLaptop">                     
-                        <div class="shopFL">
+                        <div class="shop">
                             <div class="shop-img">
-                                <img src="~/Content/Admin/img/@item.Anh"/>
+                                <img src="@Url.Content("~/Content/Admin/img/"+@item.Anh)" width = "291" height = "215"/>
                             </div>
                             <div class="shop-body">
                                <h3>@item.TenLaptop<br></h3> 

@@ -1,0 +1,23 @@
+﻿<!--Partial LoaiLaptop-->
+@using WebLaptop3.Models.Data;
+@model List<LoaiLaptop>
+
+
+
+<div class="col-md-12">
+
+    <ul class="section-tab-nav tab-nav">
+        <li class="active"><a data-toggle="tab" href="#tab1">Tất cả</a></li>
+        @foreach (var item in Model)
+        {
+            <li><a href="#">@item.TenLoaiLaptop</a></li>
+
+        }
+
+    </ul>
+
+</div>
+
+@*
+
+*@

@@ -1,4 +1,4 @@
-﻿
+﻿@model WebLaptop3.Models.Data.KhachHang
 @{
     ViewBag.Title = "DangKy";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -10,27 +10,52 @@
         <h3 class="title">Đăng ký tài khoản</h3>
     </div>
 
-    <div class="form-group">
-        <input class="input-DKDN" type="text" name="ho" placeholder="Họ">
+    <div class="form-groupDKDN">
+        @*<input class="input-DKDN" type="text" name="hoTen" placeholder="Họ Tên">*@
+        <label style="width:100px">Tên: </label>
+        @Html.EditorFor(model => model.TenKhachHang, new { htmlAttributes = new { @class = "input-DKDN" } })
     </div>
-    <div class="form-group">
-        <input class="input-DKDN" type="text" name="ten" placeholder="Tên">
+    <div class="form-groupDKDN">
+
+        @*<input class="input-DKDN" type="text" name="tuoi" placeholder="Tuổi">*@
+        <label style="width:100px">Tuổi: </label>
+        @Html.EditorFor(model => model.Tuoi, new { htmlAttributes = new { @class = "input-DKDN" } })
     </div>
-    <div class="form-group">
-        <input class="input-DKDN" type="email" name="email" placeholder="Email">
+    <div class="form-groupDKDN">
+        @*<input class="input-DKDN" type="text" name="gioiTinh" placeholder="Giới Tính">*@
+        <label style="width:100px">Giới tính: </label>
+        @Html.EditorFor(model => model.GioiTinh, new { htmlAttributes = new { @class = "input-DKDN" } })
     </div>
-    <div class="form-group">
-        <input class="input-DKDN" type="text" name="diachi" placeholder="Địa chỉ">
+    <div class="form-groupDKDN">
+        @*<input class="input-DKDN" type="email" name="email" placeholder="Email">*@
+        <label style="width:100px">Email: </label>
+        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "input-DKDN" } })
     </div>
-    <div class="form-group">
-        <input class="input-DKDN" type="password" name="password" placeholder="password">
+    <div class="form-groupDKDN">
+        @*<input class="input-DKDN" type="tel" name="sdt" placeholder="Số điện thoại">*@
+        <label style="width:100px">Số điện thoại: </label>
+        @Html.EditorFor(model => model.SDT, new { htmlAttributes = new { @class = "input-DKDN" } })
     </div>
-    <div class="form-group">
-        <input class="input-DKDN" type="tel" name="sdt" placeholder="Số điện thoại">
+    <div class="form-groupDKDN">
+        @*<input class="input-DKDN" type="text" name="diachi" placeholder="Địa chỉ">*@
+        <label style="width:100px">Địa chỉ: </label>
+        @Html.EditorFor(model => model.DiaChi, new { htmlAttributes = new { @class = "input-DKDN" } })
     </div>
+    <div class="form-groupDKDN">
+        @*<input class="input-DKDN" type="text" name="taiKhoan" placeholder="Tên đăng nhập">*@
+        <label style="width:100px">Tài khoản: </label>
+        @Html.EditorFor(model => model.TaiKhoan, new { htmlAttributes = new { @class = "input-DKDN" } })
+    </div>
+    <div class="form-groupDKDN">
+        @*<input class="input-DKDN" type="password" name="password" placeholder="password">*@
+        <label style="width:100px">Mật khẩu: </label>
+        @Html.EditorFor(model => model.MatKhau, new { htmlAttributes = new { @class = "input-DKDN" } })
+    </div>
+    
     <br>
-    <div class="form-group">
-        <input class="submitTaoTK" type="submit" name="DangNhap" value="Tạo tài khoản">
+    <div class="form-groupDKDN">
+        <input class="submitTaoTK" type="submit" name="DangNhap" value="Tạo tài khoản"/>
+        @*<input type="submit" value="Create" class="btn btn-default" />*@
     </div>
 </div>
 <br>

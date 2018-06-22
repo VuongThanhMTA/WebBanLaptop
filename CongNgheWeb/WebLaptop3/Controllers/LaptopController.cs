@@ -21,5 +21,16 @@ namespace WebLaptop3.Controllers
             var listLaptop = db.Laptops.Take(3).ToList();
             return PartialView(listLaptop);
         }
+
+        public PartialViewResult ListLaptopPartial()
+        {
+            var listLaptop = db.Laptops.Take(5).ToList();
+            return PartialView(listLaptop);
+        }
+
+        public PartialViewResult AllLaptopPartial() {
+            var listLaptop = db.Laptops.ToList();
+            return PartialView(listLaptop);
+        }
     }
 }

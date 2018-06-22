@@ -63,7 +63,15 @@
 
 }
 .form-groupDKDN {
+    width :100%;
     margin-left: 25%;
+   
+}
+
+.form-groupDangKy {
+    width :100%;
+    margin-left: 25%;
+    margin-right: 25%;
    
 }
 
@@ -79,11 +87,30 @@
     margin-left: 25%;
 }
 
-/*Css FirstLaptop 3  ảnh đầu tiên */
-.rowFL{
-    margin-right: -15px;
-    margin-left: -15px;
+
+
+
+
+.form-control {
+    display: block;
+    width: 30%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
+
+/*Css FirstLaptop 3  ảnh đầu tiên */
 
 .FirstLaptop{
     float:left;
@@ -93,15 +120,210 @@
 }
 
 .shopFL{
-     float:left;
-     width:30%;
-     margin: 0px 10px;
+    position: relative;
+    overflow: hidden;
+    margin: 15px 0px;
 }
 
 .FirstLaptop .shop.shop-img>img{
-    width:100%;
+    width:10%;
      height:100%;
 }
 
+/*CSS Sản phẩm*/
+.SanPham{
+    float:left;
+    width:50%;
+}
+.SanPham:hover {
+  -webkit-box-shadow: 0px 0px 6px 0px #E4E7ED, 0px 0px 0px 2px #D10024;
+  box-shadow: 0px 0px 6px 0px #E4E7ED, 0px 0px 0px 2px #D10024;
+}
+
+.SanPham .SanPham-img {
+  position: relative;
+  width:100%;
+  margin: 0px 5px;
+}
+
+.SanPham .SanPham-img>img {
+  width: 100%;
+  height:40%;
+}
 
 
+.SanPham .SanPham-body {
+  position: relative;
+  padding: 15px;
+  background-color: #FFF;
+  text-align: center;
+  z-index: 20;
+}
+
+.SanPham .SanPham-body .SanPham-category {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #8D99AE;
+}
+
+.SanPham .SanPham-body .SanPham-name {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.SanPham .SanPham-body .SanPham-name>a {
+  font-weight: 700;
+}
+
+.SanPham .SanPham-body .SanPham-name>a:hover, .SanPham .SanPham-body .SanPham-name>a:focus {
+  color: #D10024;
+}
+
+.SanPham .SanPham-body .SanPham-price {
+  color: #D10024;
+  font-size: 18px;
+}
+
+.SanPham .SanPham-body .SanPham-price .SanPham-old-price {
+  font-size: 70%;
+  font-weight: 400;
+  color: #8D99AE;
+}
+
+.SanPham .SanPham-body .SanPham-rating {
+  position: relative;
+  margin: 15px 0px 10px;
+  height: 20px;
+}
+
+.SanPham .SanPham-body .SanPham-rating>i {
+  position: relative;
+  width: 14px;
+  margin-right: -4px;
+  background: #FFF;
+  color: #E4E7ED;
+  z-index: 10;
+}
+
+.SanPham .SanPham-body .SanPham-rating>i.fa-star {
+  color: #ef233c;
+}
+
+.SanPham .SanPham-body .SanPham-rating:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 1px;
+  background-color: #E4E7ED;
+}
+
+.SanPham .SanPham-body .SanPham-btns>button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background: transparent;
+  border: none;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.SanPham .SanPham-body .SanPham-btns>button:hover {
+  background-color: #E4E7ED;
+  color: #D10024;
+  border-radius: 50%;
+}
+
+.SanPham .SanPham-body .SanPham-btns>button .tooltipp {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -15px);
+  -ms-transform: translate(-50%, -15px);
+  transform: translate(-50%, -15px);
+  width: 150px;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 10px;
+  background: #1e1f29;
+  color: #FFF;
+  text-transform: uppercase;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.SanPham .SanPham-body .SanPham-btns>button:hover .tooltipp {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, -5px);
+  -ms-transform: translate(-50%, -5px);
+  transform: translate(-50%, -5px);
+}
+
+.SanPham .add-to-cart {
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  padding: 15px;
+  background: #1e1f29;
+  text-align: center;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  z-index: 2;
+}
+
+.SanPham:hover .add-to-cart {
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.SanPham .add-to-cart .add-to-cart-btn {
+  position: relative;
+  border: 2px solid transparent;
+  height: 40px;
+  padding: 0 30px;
+  background-color: #ef233c;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 40px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.SanPham .add-to-cart .add-to-cart-btn>i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  color: #D10024;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.SanPham .add-to-cart .add-to-cart-btn:hover {
+  background-color: #FFF;
+  color: #D10024;
+  border-color: #D10024;
+  padding: 0px 30px 0px 50px;
+}
+
+.SanPham .add-to-cart .add-to-cart-btn:hover>i {
+  opacity: 1;
+  visibility: visible;
+}

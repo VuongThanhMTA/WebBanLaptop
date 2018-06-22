@@ -172,6 +172,7 @@
     <Compile Include="Controllers\DangKyDangNhapController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LaptopController.cs" />
+    <Compile Include="Controllers\LoaiLaptopController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -189,22 +190,46 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Admin\img\AppleMacbookAir.jpg" />
-    <Content Include="Content\Admin\img\AppleMacbookPro.jpg" />
+    <Content Include="Content\Admin\img\AppleMacbookAir1.jpg" />
+    <Content Include="Content\Admin\img\AppleMacbookPro1.jpg" />
     <Content Include="Content\Admin\img\asus-a540la-1.jpg" />
+    <Content Include="Content\Admin\img\Asus-GL552VX-DM070D-1.jpg" />
     <Content Include="Content\Admin\img\Asus-TP500LA.jpg" />
-    <Content Include="Content\Admin\img\asusk501l.jpg" />
-    <Content Include="Content\Admin\img\asusk501lb.jpg" />
+    <Content Include="Content\Admin\img\ASUSK501L.jpg" />
+    <Content Include="Content\Admin\img\ASUSK501LB.jpg" />
+    <Content Include="Content\Admin\img\AsusK501UX.jpg" />
+    <Content Include="Content\Admin\img\asus_zenbook_ux410_review05_thumb1200_4-3.jpg" />
     <Content Include="Content\Admin\img\Dell-inspiron-13-7000-2-in-1.jpg" />
+    <Content Include="Content\Admin\img\dell-inspiron-15-i15rv-6190-blk.jpg" />
+    <Content Include="Content\Admin\img\dell-vostro-v5468i5-7200u-1.jpg" />
+    <Content Include="Content\Admin\img\dell-vostro.jpg" />
     <Content Include="Content\Admin\img\dell-xps-15-main.jpg" />
-    <Content Include="Content\Admin\img\dellinspiron.jpg" />
-    <Content Include="Content\Admin\img\delllatitude.jpg" />
+    <Content Include="Content\Admin\img\dell1570000.jpg" />
+    <Content Include="Content\Admin\img\Dellinspiron.jpg" />
+    <Content Include="Content\Admin\img\Delllatitude.jpg" />
+    <Content Include="Content\Admin\img\dellxps12.jpg" />
     <Content Include="Content\Admin\img\Dell_XPS_13.jpg" />
+    <Content Include="Content\Admin\img\hp14bs561tu.jpg" />
+    <Content Include="Content\Admin\img\hp2018best.jpg" />
+    <Content Include="Content\Admin\img\hppavilion15.jpg" />
     <Content Include="Content\Admin\img\huawei-matebook-x-pro-2018-review-15.jpg" />
+    <Content Include="Content\Admin\img\inspiron-13-and-15-7000.jpg" />
+    <Content Include="Content\Admin\img\lenovo500s.jpg" />
     <Content Include="Content\Admin\img\logo.png" />
-    <Content Include="Content\Admin\img\macbook-air-2015-02.jpg" />
-    <Content Include="Content\Admin\img\macbookair2015.jpg" />
+    <Content Include="Content\Admin\img\Macbook-air-2015-02.jpg" />
+    <Content Include="Content\Admin\img\macbook-air99.jpg" />
+    <Content Include="Content\Admin\img\macbook-pro-15.jpg" />
+    <Content Include="Content\Admin\img\macbook-pro-windows-3.jpg" />
+    <Content Include="Content\Admin\img\Macbookair2015.jpg" />
+    <Content Include="Content\Admin\img\notbookdell15.jpg" />
     <Content Include="Content\Admin\img\product03.png" />
+    <Content Include="Content\Admin\img\sonnywo.jpg" />
+    <Content Include="Content\Admin\img\Sony_SVE14112FX.jpg" />
+    <Content Include="Content\Admin\img\VIO1.jpg" />
+    <Content Include="Content\Admin\img\zenbook-ux410-1.jpg" />
+    <Content Include="Content\Admin\img\ZenBook-UX430-1.jpg" />
+    <Content Include="Content\Admin\img\zenBook430ua.jpg" />
+    <Content Include="Content\Admin\img\_Laptop Asus UX430UQ -9.jpg" />
     <Content Include="Content\Admin\NguoiDungCss\NguoiDungCssLayout.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -279,6 +304,11 @@
     <Content Include="Views\DangKyDangNhap\DangKy.cshtml" />
     <Content Include="Views\DangKyDangNhap\DangNhap.cshtml" />
     <Content Include="Views\Laptop\FirstLaptopPartial.cshtml" />
+    <Content Include="Views\LoaiLaptop\LoaiLaptopPartial.cshtml" />
+    <Content Include="Views\Laptop\ListLaptopPartial.cshtml" />
+    <Content Include="Views\Laptop\demoPartial.cshtml" />
+    <Content Include="Views\DangKyDangNhap\DangKy1.cshtml" />
+    <Content Include="Views\Laptop\AllLaptopPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
