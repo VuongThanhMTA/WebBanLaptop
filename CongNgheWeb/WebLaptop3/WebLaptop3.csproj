@@ -170,6 +170,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\DangKyDangNhapController.cs" />
+    <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LaptopController.cs" />
     <Compile Include="Controllers\LoaiLaptopController.cs" />
@@ -177,9 +178,17 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Data\ChiTietHoaDon.cs" />
+    <Compile Include="Models\Data\HoaDon.cs" />
+    <Compile Include="Models\Data\KhachHang.cs" />
+    <Compile Include="Models\Data\Laptop.cs" />
+    <Compile Include="Models\Data\LoaiLaptop.cs" />
+    <Compile Include="Models\Data\NhaCungCap.cs" />
+    <Compile Include="Models\Data\QuanLyBanLaptopModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\NewData\ChiTietHoaDon.cs" />
+    <Compile Include="Models\NewData\GioHang.cs" />
     <Compile Include="Models\NewData\HoaDon.cs" />
     <Compile Include="Models\NewData\KhachHang.cs" />
     <Compile Include="Models\NewData\Laptop.cs" />
@@ -307,12 +316,13 @@
     <Content Include="Views\LoaiLaptop\LoaiLaptopPartial.cshtml" />
     <Content Include="Views\Laptop\ListLaptopPartial.cshtml" />
     <Content Include="Views\Laptop\demoPartial.cshtml" />
-    <Content Include="Views\DangKyDangNhap\DangKy1.cshtml" />
     <Content Include="Views\Laptop\AllLaptopPartial.cshtml" />
     <Content Include="Views\Laptop\DetailLaptop.cshtml" />
+    <Content Include="Views\DangKyDangNhap\DangKy1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\GioHang\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
