@@ -1,0 +1,97 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+
+@model PagedList.PagedList< WebLaptop3.Models.Data_minh.Laptop >
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới Laptop", "ThemMoi")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First().MaLaptop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().TenLaptop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().MaLoaiLaptop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Gia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().SoLuong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Anh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().MaNhaCungCap)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Mota)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().TrangThai)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaLaptop)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenLaptop)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaLoaiLaptop)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuong)
+        </td>
+        <td>
+            <div>  <img src="@Url.Content("~/Content/Admin/img/"+item.Anh)" width="200" height=""></div>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaNhaCungCap)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mota)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TrangThai)
+        </td>
+        <td>
+            @Html.ActionLink("Chỉnh sửa", "ChinhSua", new {@MaLaptop =item.MaLaptop }) |
+          
+            @Html.ActionLink("Xóa", "Xoa", new { @MaLaptop = item.MaLaptop })
+        </td>
+    </tr>
+    }
+
+</table>
+@*tạo link liên kết các trang*@
+Trang @(Model.PageCount< Model.PageNumber ? 0 : Model.PageNumber)/  @Model.PageCount
+<div class="MenuTrang">
+    @Html.PagedListPager(Model,page =>Url.Action("Index", new { page = page}))
+</div>
+
+<style>
+    .MenuTrang li {
+        display: inline;
+    }
+</style>
