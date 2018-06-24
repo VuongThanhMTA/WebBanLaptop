@@ -18,9 +18,10 @@
             <h4>Mô tả: @Model.Mota<br></h4>
             <h3>Hãng: @Model.LoaiLaptop.TenLoaiLaptop<br></h3>
             <h4>Giá: @Model.Gia<br></h4>
-            <button class="btnMua", style="width:100px; height:30px;background-color:sandybrown">
-                Mua
-            </button>
+            @using (Html.BeginForm("ThemGioHang", "GioHang", new { @maLaptop = Model.MaLaptop, @strUrl = Request.Url.ToString() }))
+            {
+                <input type="submit" style="cursor:pointer" value="Mua" id="btnMua" class="btn btn-danger">
+            }
         </div>
     </div>
     <div>

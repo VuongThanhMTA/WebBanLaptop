@@ -22,12 +22,13 @@
         
         [StringLength(50)]
         [Display(Name = "Họ Tên")]
-        [Required(ErrorMessage ="{0} Không không được trống")]
+        [Required(ErrorMessage ="{0}  không được trống")]
 
         public string TenKhachHang { get; set; }
 
         [Display(Name = "Tuổi")]
         [Required(ErrorMessage = "{0} Không được trống")]
+        [Range(0,Int32.MaxValue,ErrorMessage ="Tuoi khong hop le")]
         public int? Tuoi { get; set; }
 
         [StringLength(5)]
@@ -35,9 +36,10 @@
         [Required(ErrorMessage = "{0} Không được trống")]
         public string GioiTinh { get; set; }
 
-        [StringLength(20)]
+        [StringLength(11,ErrorMessage ="SDT khong hop le")]
         [Display(Name = "SDT")]
         [Required(ErrorMessage = "{0}  không được trống")]
+        [Range(0, Int32.MaxValue, ErrorMessage = " khong hop le")]
         public string SDT { get; set; }
 
         [StringLength(50)]
@@ -48,6 +50,8 @@
         [StringLength(30)]
         [Display(Name = "Email")]
         [Required(ErrorMessage = "{0}  không được trống")]
+        //[RegularExpression((@"^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"), ErrorMessage ="{0} không hợp lệ}")]
+
         public string Email { get; set; }
 
         [StringLength(30)]
@@ -64,3 +68,4 @@
         public virtual ICollection<HoaDon> HoaDons { get; set; }
     }
 }
+//[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]// dinh dang kieu ngay

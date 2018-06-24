@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSiteBanLaptop", "WebSiteBanLaptop\WebSiteBanLaptop.csproj", "{13AE2F70-12C9-4258-873D-0BE2BB52A585}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaptopWeb", "LaptopWeb\LaptopWeb.csproj", "{310C939D-DB9A-4428-A123-ABD8470BB985}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebLaptop3", "WebLaptop3\WebLaptop3.csproj", "{51CBFE17-11DA-467E-BD00-9D0AD0257A2E}"
 EndProject
 Global
@@ -15,14 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{13AE2F70-12C9-4258-873D-0BE2BB52A585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{13AE2F70-12C9-4258-873D-0BE2BB52A585}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{13AE2F70-12C9-4258-873D-0BE2BB52A585}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{13AE2F70-12C9-4258-873D-0BE2BB52A585}.Release|Any CPU.Build.0 = Release|Any CPU
-		{310C939D-DB9A-4428-A123-ABD8470BB985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{310C939D-DB9A-4428-A123-ABD8470BB985}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{310C939D-DB9A-4428-A123-ABD8470BB985}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{310C939D-DB9A-4428-A123-ABD8470BB985}.Release|Any CPU.Build.0 = Release|Any CPU
 		{51CBFE17-11DA-467E-BD00-9D0AD0257A2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{51CBFE17-11DA-467E-BD00-9D0AD0257A2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51CBFE17-11DA-467E-BD00-9D0AD0257A2E}.Release|Any CPU.ActiveCfg = Release|Any CPU

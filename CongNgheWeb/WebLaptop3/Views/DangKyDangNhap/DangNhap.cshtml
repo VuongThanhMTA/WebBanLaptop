@@ -3,19 +3,23 @@
     ViewBag.Title = "DangNhap";
     Layout = "~/Views/Shared/_Layout.cshtml";
 
+}   
 
-}   <div class="section-DKDN">
+@using (Html.BeginForm())
+{
+    <div class="section-DKDN">
         <h3 class="title">Đăng nhập</h3>
     </div>
     <div class="form-groupDKDN">
-        Tên đăng nhập: <input class="input-TenDN" type="text" name="TaiKhoan" placeholder="Tên đăng nhập">
+        Tên đăng nhập: <input class="input-TenDN" type="text" name="txtTaiKhoan" placeholder="Tên đăng nhập">
     </div>
     <div class="form-groupDKDN">
-        Mật khẩu: <input class="input-DKDN" type="password" name="password" placeholder="Password">
+        Mật khẩu: <input class="input-DKDN" type="password" name="txtPassword" placeholder="Password">
     </div><br>
+    <p style="color:red;margin-left:40%">@ViewBag.ThongBao</p>
     <div class="form-groupDKDN">
-        <input class="submitTaoTK" type="submit" name="DangNhap" value="Đăng nhập">
+        <input class="submitTaoTK" type="submit" name="btnDangNhap" value="Đăng nhập">
     </div>
     <br>
 
-
+}

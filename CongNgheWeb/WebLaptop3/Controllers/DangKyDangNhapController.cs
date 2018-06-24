@@ -27,11 +27,31 @@ namespace WebLaptop3.Controllers
         {
             db.KhachHangs.Add(kh);
 
-            db.SaveChanges(); 
+            db.SaveChanges();
+            ViewBag.ThongBao = "Đăng ký thành công";
             return View();
         }
+        [HttpGet]
         public ActionResult DangNhap()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult DangNhap(FormCollection f) 
+        {
+            String sTaiKhoan = f["txtTaiKhoan"].ToString();
+            String sMatKhau = f["txtPassword"].ToString();
+
+            KhachHang kh = db.KhachHangs.SingleOrDefault(n => n.TaiKhoan == sTaiKhoan && n.MatKhau == sMatKhau);
+            if (kh != null)
+            {
+                ViewBag.ThongBao = "Đăng nhập thành công";
+                Session["TaiKhoan"] = kh;
+                //return View("Index","DangKyDangNhap");
+                return RedirectToAction("Index", "Home");
+            }
+            ViewBag.ThongBao = "Tên tài khoản hoặc mật khẩu không đúng";
             return View();
         }
 
@@ -49,6 +69,7 @@ namespace WebLaptop3.Controllers
                 db.KhachHangs.Add(kh);
 
                 db.SaveChanges();
+                ViewBag.ThongBao = "Đăng ký thành công";
             }
             return View();
         }

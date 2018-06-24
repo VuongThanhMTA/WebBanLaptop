@@ -20,13 +20,16 @@
                 foreach (var item in Model)
                 {                  
                     <div class="FirstLaptop">                     
-                        <div class="shop">
+                        <div class="shop" style="width:200px; height:200px">
                             <div class="shop-img">
-                                <img src="@Url.Content("~/Content/Admin/img/"+@item.Anh)" width = "291" height = "215"/>
+                                <img src="@Url.Content("~/Content/Admin/img/"+@item.Anh)" width = "200" height = "150"/>
+                                @*<a href="@Url.Action("DetailLaptop","Laptop", new {@MaLaptop = @item.MaLaptop })">
+                                  <img src="@Url.Content("~/Content/Admin/img/"+item.Anh)" width = "291" height = "215">
+                                </a>*@
                             </div>
                             <div class="shop-body">
                                <h3>@item.TenLaptop<br></h3> 
-                                <a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+                                <a href="@Url.Action("DetailLaptop","Laptop", new {@MaLaptop = @item.MaLaptop })" class="cta-btn">Xem <i class="fa fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>

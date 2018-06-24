@@ -1,6 +1,8 @@
 ﻿
 @using WebLaptop3.Models.NewData;
-@model List<Laptop>
+@using PagedList;
+@using PagedList.Mvc;
+@model PagedList<Laptop>
 
 @{
     ViewBag.Title = "AllLaptopPartial";
@@ -23,57 +25,23 @@
                     <div class="checkbox-filter">
 
                         <div class="input-checkbox">
-                            <input type="checkbox" id="category-1">
-                            <label for="category-1">
-                                <span></span>
-                                Laptops
-                                <small>(120)</small>
-                            </label>
+                            <a href="#">Asus</a>
                         </div>
 
                         <div class="input-checkbox">
-                            <input type="checkbox" id="category-2">
-                            <label for="category-2">
-                                <span></span>
-                                Smartphones
-                                <small>(740)</small>
-                            </label>
+                            <a href="#">Dell</a>
                         </div>
 
                         <div class="input-checkbox">
-                            <input type="checkbox" id="category-3">
-                            <label for="category-3">
-                                <span></span>
-                                Cameras
-                                <small>(1450)</small>
-                            </label>
+                            <a href="#">Apple</a>
                         </div>
 
                         <div class="input-checkbox">
-                            <input type="checkbox" id="category-4">
-                            <label for="category-4">
-                                <span></span>
-                                Accessories
-                                <small>(578)</small>
-                            </label>
+                            <a href="#">HP</a>
                         </div>
 
                         <div class="input-checkbox">
-                            <input type="checkbox" id="category-5">
-                            <label for="category-5">
-                                <span></span>
-                                Laptops
-                                <small>(120)</small>
-                            </label>
-                        </div>
-
-                        <div class="input-checkbox">
-                            <input type="checkbox" id="category-6">
-                            <label for="category-6">
-                                <span></span>
-                                Smartphones
-                                <small>(740)</small>
-                            </label>
+                            <a href="#">Sonny</a>
                         </div>
                     </div>
                 </div>
@@ -94,7 +62,7 @@
 
                         <div class="product" style="float:left ; width:150px; height:250px;margin-right:10px;margin-bottom:50px">
                             <div class="product-img">
-                             <a href="@Url.Action("DetailLaptop","Laptop", new {@MaLaptop = @item.MaLaptop })">  <img src="@Url.Content("~/Content/Admin/img/"+item.Anh)" width = "150" height = "100"></a>
+                                <a href="@Url.Action("DetailLaptop","Laptop", new {@MaLaptop = @item.MaLaptop })">  <img src="@Url.Content("~/Content/Admin/img/"+item.Anh)" width="150" height="100"></a>
                             </div>
                             <div class="product-body">
 
@@ -129,13 +97,11 @@
                 <!-- /store products -->
                 <!-- store bottom filter -->
                 <div class="store-filter clearfix">
-                    <ul class="store-pagination">
-                        <li class="active">1</li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                    </ul>
+                    @*Tạo các trang*@
+                    @Html.PagedListPager(Model, pageTemp => Url.Action("AllLaptopPartial", new { pageTemp = pageTemp }), new PagedListRenderOptions()
+               {
+                   //LiElementClasses = new List<string> { }
+               })
                 </div>
                 <!-- /store bottom filter -->
             </div>
