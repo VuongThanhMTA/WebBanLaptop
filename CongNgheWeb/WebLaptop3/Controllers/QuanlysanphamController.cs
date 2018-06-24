@@ -83,21 +83,22 @@ namespace WebLaptop3.Controllers
             return View(laptop);
         }
         [HttpPost]
-        public ActionResult ChinhSua(Laptop laptop)
+        public ActionResult ChinhSua(Laptop laptop, HttpPostedFileBase fileUpload)
         {
-            //kiểm tra đường dẫn ảnh laptop
+
+            //// kiểm tra đường dẫn ảnh laptop
             //if (fileUpload == null)
             //{
             //    ViewBag.ThongBao = "Chọn hình ảnh";
             //    return View();
             //}
-            //thêm vào cơ sở dữ liệu
 
-            //lưu tên file
-            //var fileName = Path.GetFileName(fileUpload.FileName);
-            //lưu đường dẫn của file
-            //var path = Path.Combine(Server.MapPath("/HinhanhSP"), fileName);
-            //Kiểm tra hình ảnh đã tồn tại chưa
+
+            ////lưu tên file
+            // var fileName = Path.GetFileName(fileUpload.FileName);
+            //// lưu đường dẫn của file
+            // var path = Path.Combine(Server.MapPath("~/Content/Admin/img/"), fileName);
+            //// Kiểm tra hình ảnh đã tồn tại chưa
             //if (System.IO.File.Exists(path))
             //{
             //    ViewBag.ThongBao = "Hình ảnh đã tồn tại";
@@ -111,10 +112,11 @@ namespace WebLaptop3.Controllers
             //thực hiện cập nhật trong model
             db.Entry(laptop).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
+
+
             //Thêm dữ liệu vào dropdownlist
             ViewBag.MaLoaiLaptop = new SelectList(db.LoaiLaptop.ToList().OrderBy(n => n.TenLoaiLaptop), "MaLoaiLapTop", "TenLoaiLapTop");
             ViewBag.MaNhaCungCap = new SelectList(db.NhaCungCap.ToList().OrderBy(n => n.TenNhaCungCap), "MaNhaCungCap", "TenNhaCungCap");
-
 
             return View();
         }
