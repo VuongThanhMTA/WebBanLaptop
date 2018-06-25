@@ -8,11 +8,15 @@
     Layout = "~/Views/Layout/AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
 
+<h4>Trang Quản Lý => Quản lý nhà cung cấp</h4>
 <p>
-    @Html.ActionLink("Thêm mới khách hàng", "ThemMoi")
+    <div style="background-color:aqua; width:100px">   @Html.ActionLink("Thêm mới khách hàng", "ThemMoi") </div>
+
+
+    @*@Html.ActionLink("Thêm mới Laptop", "ThemMoi")*@
 </p>
+
 <table class="table">
     <tr>
         <th>
@@ -46,9 +50,10 @@
                 @Html.DisplayFor(modelItem => item.SDT)
             </td>
             <td>
-                @Html.ActionLink("Chỉnh Sửa", "ChinhSua", new { @MaNhaCungCap = item.MaNhaCungCap }) |
+                <div style="background-color:chartreuse; width:70px">  @Html.ActionLink("Chỉnh Sửa", "ChinhSua", new { @MaNhaCungCap = item.MaNhaCungCap }) </div>
+                <div><br /></div>
+                <div style="background-color:sandybrown; width:25px ; margin-left:25%"> @Html.ActionLink("Xóa", "Xoa", new { @MaNhaCungCap = item.MaNhaCungCap }) </div>
 
-                @Html.ActionLink("Xóa", "Xoa", new { @MaNhaCungCap = item.MaNhaCungCap })
             </td>
         </tr>
     }

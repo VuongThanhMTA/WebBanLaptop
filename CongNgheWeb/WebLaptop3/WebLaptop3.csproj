@@ -178,8 +178,10 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\DangKyDangNhapController.cs" />
     <Compile Include="Controllers\GioHangController.cs" />
+    <Compile Include="Controllers\HoaDonController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LaptopController.cs" />
     <Compile Include="Controllers\LoaiLaptopController.cs" />
@@ -213,8 +215,8 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Admin\img\AppleMacbookAir1.jpg" />
-    <Content Include="Content\Admin\img\AppleMacbookPro1.jpg" />
+    <Content Include="Content\Admin\img\AppleMacbookAir.jpg" />
+    <Content Include="Content\Admin\img\AppleMacbookPro.jpg" />
     <Content Include="Content\Admin\img\asus-a540la-1.jpg" />
     <Content Include="Content\Admin\img\Asus-GL552VX-DM070D-1.jpg" />
     <Content Include="Content\Admin\img\Asus-TP500LA.jpg" />
@@ -233,7 +235,7 @@
     <Content Include="Content\Admin\img\dellxps12.jpg" />
     <Content Include="Content\Admin\img\Dell_XPS_13.jpg" />
     <Content Include="Content\Admin\img\hp14bs561tu.jpg" />
-    <Content Include="Content\Admin\img\hp2018best.jpg" />
+    <Content Include="Content\Admin\img\hp2018bestk.jpg" />
     <Content Include="Content\Admin\img\hppavilion15.jpg" />
     <Content Include="Content\Admin\img\huawei-matebook-x-pro-2018-review-15.jpg" />
     <Content Include="Content\Admin\img\inspiron-13-and-15-7000.jpg" />
@@ -1889,6 +1891,9 @@
     <Content Include="Views\QuanlyLoaiLT\Xoa.cshtml" />
     <Content Include="Views\TimKiem\KetQuaTimKiem.cshtml" />
     <Content Include="Views\DangKyDangNhap\DKDNPartial.cshtml" />
+    <Content Include="Views\HoaDon\Index.cshtml" />
+    <Content Include="Views\HoaDon\ChinhSua.cshtml" />
+    <Content Include="Views\HoaDon\Xoa.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,4 +1,4 @@
-namespace WebLaptop3.Models.Data_minh
+﻿namespace WebLaptop3.Models.Data_minh
 {
     using System;
     using System.Collections.Generic;
@@ -16,19 +16,22 @@ namespace WebLaptop3.Models.Data_minh
         }
 
         [Key]
+        [Display(Name = "Mã hóa đơn ")]
         public int MaHoaDon { get; set; }
-
+        [Display(Name = "Mã khách hàng ")]
         public int? MaKhachHang { get; set; }
-
+        [Display(Name = "Ngày đặt hàng ")]
         [Column(TypeName = "date")]
         public DateTime? NgayDatHang { get; set; }
-
+        [Display(Name = "Ngày giao hàng ")]
         [Column(TypeName = "date")]
         public DateTime? NgayGiaoHang { get; set; }
 
+        [Display(Name = "Tình trạng ")]
+        [Required(ErrorMessage = "{0}  không được trống")]
         [StringLength(50)]
         public string TinhTrang { get; set; }
-
+        [Display(Name = "Đã thanh toán ")]
         public int? DaThanhToan { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

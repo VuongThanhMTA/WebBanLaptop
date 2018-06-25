@@ -6,6 +6,7 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+   
 }
 
 @*Chen partial firstlatop*@
@@ -18,7 +19,7 @@
 @Html.Action("ListLaptopPartial", "Laptop", new { @maLoaiLaptop = "1" })
 
 
-<h3 class="title"style="margin-left:10%;margin-top:20px;">New Dell</h3>
+<h3 class="title" style="margin-left:10%;margin-top:20px;">New Dell</h3>
 @Html.Action("ListLaptopPartial", "Laptop", new { @maLoaiLaptop = "2" })
 
 <h3 class="title" style="margin-left:10%;margin-top:20px;">New MAC</h3>

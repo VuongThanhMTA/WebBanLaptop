@@ -19,7 +19,7 @@ namespace WebLaptop3.Controllers
             int pageNumber = (page ?? 1);
             int pageSize = 10;
             return View(db.NhaCungCap.ToList().OrderBy(n => n.TenNhaCungCap).ToPagedList(pageNumber, pageSize));
-            return View();
+           
         }
 
         //Thêm Mới
@@ -45,6 +45,7 @@ namespace WebLaptop3.Controllers
                 //thêm vào cơ sở dữ liệu
                 db.NhaCungCap.Add(nhacungcap);
             db.SaveChanges();
+            Response.Write("<script language='JavaScript'> alert('Đã thêm mới thành công !!'); </script>");
             return View();
         }
 
@@ -68,7 +69,7 @@ namespace WebLaptop3.Controllers
         {
             db.Entry(nhacungcap).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
-
+            Response.Write("<script language='JavaScript'> alert('Đã chỉnh sửa thành công !!'); </script>");
             return View();
         }
 

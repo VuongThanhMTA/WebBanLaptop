@@ -54,10 +54,21 @@ namespace WebLaptop3.Controllers
             KhachHang kh = db.KhachHang.SingleOrDefault(n => n.TaiKhoan == sTaiKhoan && n.MatKhau == sMatKhau);
             if (kh != null)
             {
-                ViewBag.ThongBao = "Đăng nhập thành công";
-                Session["TaiKhoan"] = kh;
-                //return View("Index","DangKyDangNhap");
-                return RedirectToAction("Index", "Home");
+                if (sTaiKhoan == "admin" && sMatKhau == "admin")
+                {
+                    ViewBag.ThongBao = "Đăng nhập thành công vào tài khoản admin";
+                    Session["TaiKhoan"] = kh;
+                    //return View("Index","DangKyDangNhap");
+                    return RedirectToAction("Index", "Quanlysanpham");
+
+                }
+                else
+                {
+                    ViewBag.ThongBao = "Đăng nhập thành công";
+                    Session["TaiKhoan"] = kh;
+                    //return View("Index","DangKyDangNhap");
+                    return RedirectToAction("Index", "Home");
+                }
             }
             ViewBag.ThongBao = "Tên tài khoản hoặc mật khẩu không đúng";
             return View();

@@ -13,6 +13,7 @@ namespace WebLaptop3.Controllers
         Quanlylaptop_minh db = new Quanlylaptop_minh();
         public ActionResult Index()
         {
+        
             return View();
         }
 

@@ -18,7 +18,7 @@ namespace WebLaptop3.Controllers
             int pageNumber = (page ?? 1);
             int pageSize = 10;
             return View(db.KhachHang.ToList().OrderBy(n => n.TenKhachHang).ToPagedList(pageNumber, pageSize));
-            return View();
+     
         }
 
         //Thêm Mới
@@ -44,6 +44,7 @@ namespace WebLaptop3.Controllers
             //thêm vào cơ sở dữ liệu
             db.KhachHang.Add(khachhang);
             db.SaveChanges();
+            Response.Write("<script language='JavaScript'> alert('Đã thêm mới thành công !!'); </script>");
             return View();
         }
         [HttpGet]
@@ -66,7 +67,7 @@ namespace WebLaptop3.Controllers
         {
             db.Entry(khachhang).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
-
+            Response.Write("<script language='JavaScript'> alert('Đã chỉnh sửa thành công !!'); </script>");
             return View();
         }
         //xóa nhà cung cấp

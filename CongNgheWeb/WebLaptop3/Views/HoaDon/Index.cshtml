@@ -1,0 +1,73 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+
+@model PagedList.PagedList<WebLaptop3.Models.Data_minh.HoaDon>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/AdminLayout.cshtml";
+}
+
+
+<h4>Trang Quản Lý => Quản lý Hóa đơn</h4>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First().MaKhachHang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().NgayDatHang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().NgayGiaoHang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().TinhTrang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().DaThanhToan)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaKhachHang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayDatHang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayGiaoHang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TinhTrang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DaThanhToan)
+            </td>
+            <td>
+                <div style="background-color:chartreuse; width:70px">  @Html.ActionLink("Chỉnh sửa", "ChinhSua", new { @MaHoaDon = item.MaHoaDon }) </div>
+                <div><br /></div>
+                <div style="background-color:sandybrown; width:25px ; margin-left:25%">  @Html.ActionLink("Xóa", "Xoa", new { @MaHoaDon = item.MaHoaDon }) </div>
+
+            </td>
+        </tr>
+    }
+
+</table>
+@*tạo link liên kết các trang*@
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/  @Model.PageCount
+<div class="MenuTrang">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+</div>
+
+<style>
+    .MenuTrang li {
+        display: inline;
+    }
+</style>

@@ -5,14 +5,14 @@
     Layout = "~/Views/Layout/AdminLayout.cshtml";
 }
 
-<h2>Chỉnh Sửa</h2>
+<h4>Trang quản lý =>Quản lý laptop => Chỉnh Sửa</h4>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
 <div class="form-horizontal">
-    <h4>Laptop</h4>
+   
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     @Html.HiddenFor(model => model.MaLaptop)

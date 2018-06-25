@@ -8,10 +8,11 @@
     Layout = "~/Views/Layout/AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
+<h4>Trang Quản Lý => Quản lý khách hàng</h4>
 
 <p>
-    @Html.ActionLink("Thêm mới khách hàng", "ThemMoi")
+    <div style="background-color:aqua; width:100px">    @Html.ActionLink("Thêm mới khách hàng", "ThemMoi") </div>
+   
 </p>
 <table class="table">
     <tr>
@@ -76,9 +77,13 @@
             @Html.DisplayFor(modelItem => item.MatKhau)
         </td>
         <td>
-            @Html.ActionLink("Chỉnh sửa", "ChinhSua", new { @MaKhachHang = item.MaKhachHang }) |
+            <div style="background-color:chartreuse; width:70px">   @Html.ActionLink("Chỉnh sửa", "ChinhSua", new { @MaKhachHang = item.MaKhachHang })  </div>
+            <div><br /></div>
+            <div style="background-color:sandybrown; width:25px ; margin-left:8%">   @Html.ActionLink("Xóa", "Xoa", new { @MaKhachHang = item.MaKhachHang }) </div>
 
-            @Html.ActionLink("Xóa", "Xoa", new { @MaKhachHang = item.MaKhachHang })
+
+
+           
         </td>
     </tr>
     }

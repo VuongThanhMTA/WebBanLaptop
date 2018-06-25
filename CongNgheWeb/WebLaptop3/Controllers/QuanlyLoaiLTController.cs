@@ -18,7 +18,7 @@ namespace WebLaptop3.Controllers
             int pageNumber = (page ?? 1);
             int pageSize = 10;
             return View(db.LoaiLaptop.ToList().OrderBy(n => n.TenLoaiLaptop).ToPagedList(pageNumber, pageSize));
-            return View();
+      
         }
         //Thêm Mới
         [HttpGet]
@@ -43,6 +43,7 @@ namespace WebLaptop3.Controllers
             //thêm vào cơ sở dữ liệu
             db.LoaiLaptop.Add(loaiLaptop);
             db.SaveChanges();
+            Response.Write("<script language='JavaScript'> alert('Đã thêm mới thành công !!'); </script>");
             return View();
         }
         [HttpGet]
@@ -65,7 +66,7 @@ namespace WebLaptop3.Controllers
         {
             db.Entry(loailaptop).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
-
+            Response.Write("<script language='JavaScript'> alert('Đã chỉnh sửa thành công !!'); </script>");
             return View();
         }
         //xóa nhà cung cấp
