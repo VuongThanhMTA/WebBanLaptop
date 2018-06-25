@@ -1,0 +1,55 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+
+@model PagedList.PagedList<WebLaptop3.Models.Data_minh.LoaiLaptop>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Thêm Mới Loại Laptop", "ThemMoi")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First().MaLoaiLaptop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().TenLoaiLaptop)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaLoaiLaptop)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenLoaiLaptop)
+        </td>
+        <td>
+            @Html.ActionLink("Chỉnh Sửa", "ChinhSua", new { @MaLoaiLaptop = item.MaLoaiLaptop }) |
+
+            @Html.ActionLink("Xóa", "Xoa", new { @MaLoaiLaptop = item.MaLoaiLaptop })
+        </td>
+    </tr>
+    }
+
+</table>
+@*tạo link liên kết các trang*@
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/  @Model.PageCount
+<div class="MenuTrang">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+</div>
+
+<style>
+    .MenuTrang li {
+        display: inline;
+    }
+</style>

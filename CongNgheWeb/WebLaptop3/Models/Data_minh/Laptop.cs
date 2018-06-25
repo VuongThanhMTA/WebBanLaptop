@@ -16,7 +16,7 @@
         }
 
         [Key]
-      
+        [Display(Name = "Mã Laptop: ")]
         public int MaLaptop { get; set; }
 
         [StringLength(50)]

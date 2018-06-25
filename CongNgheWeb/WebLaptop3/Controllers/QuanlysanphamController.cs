@@ -18,7 +18,7 @@ namespace WebLaptop3.Controllers
         {
             int pageNumber = (page ?? 1);
             int pageSize = 10;
-            return View(db.Laptop.ToList().OrderBy(n=>n.MaLaptop).ToPagedList(pageNumber,pageSize));
+            return View(db.Laptop.ToList().OrderBy(n=>n.TenLaptop).ToPagedList(pageNumber,pageSize));
         }
         //Thêm Mới
         [HttpGet]

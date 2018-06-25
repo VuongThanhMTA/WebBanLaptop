@@ -1,4 +1,4 @@
-namespace WebLaptop3.Models.Data_minh
+﻿namespace WebLaptop3.Models.Data_minh
 {
     using System;
     using System.Collections.Generic;
@@ -16,8 +16,10 @@ namespace WebLaptop3.Models.Data_minh
         }
 
         [Key]
+        [Display(Name = "Mã Loại laptop ")]
         public int MaLoaiLaptop { get; set; }
-
+        [Display(Name = "Tên Loại laptop ")]
+        [Required(ErrorMessage = "{0}  không được trống")]
         [StringLength(50)]
         public string TenLoaiLaptop { get; set; }
 

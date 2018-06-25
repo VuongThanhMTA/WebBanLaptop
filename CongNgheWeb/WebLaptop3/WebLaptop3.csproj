@@ -183,6 +183,9 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LaptopController.cs" />
     <Compile Include="Controllers\LoaiLaptopController.cs" />
+    <Compile Include="Controllers\QuanlykhachhangController.cs" />
+    <Compile Include="Controllers\QuanlyLoaiLTController.cs" />
+    <Compile Include="Controllers\QuanlynhaccController.cs" />
     <Compile Include="Controllers\QuanlysanphamController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1879,6 +1882,18 @@
     <Content Include="Views\Quanlysanpham\ChinhSua.cshtml" />
     <Content Include="Views\Quanlysanpham\Xoa.cshtml" />
     <Content Include="Views\GioHang\NguoiDungSuaGioHang.cshtml" />
+    <Content Include="Views\Quanlynhacc\Index.cshtml" />
+    <Content Include="Views\Quanlynhacc\ThemMoi.cshtml" />
+    <Content Include="Views\Quanlynhacc\ChinhSua.cshtml" />
+    <Content Include="Views\Quanlynhacc\Xoa.cshtml" />
+    <Content Include="Views\Quanlykhachhang\Index.cshtml" />
+    <Content Include="Views\Quanlykhachhang\ThemMoi.cshtml" />
+    <Content Include="Views\Quanlykhachhang\ChinhSua.cshtml" />
+    <Content Include="Views\Quanlykhachhang\Xoa.cshtml" />
+    <Content Include="Views\QuanlyLoaiLT\Index.cshtml" />
+    <Content Include="Views\QuanlyLoaiLT\ThemMoi.cshtml" />
+    <Content Include="Views\QuanlyLoaiLT\ChinhSua.cshtml" />
+    <Content Include="Views\QuanlyLoaiLT\Xoa.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
