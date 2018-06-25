@@ -1,0 +1,24 @@
+﻿@using WebLaptop3.Models.Data
+@model KhachHang
+
+@{ 
+
+    var taiKhoan = (KhachHang) Session["TaiKhoan"];
+}
+
+@if (Session["TaiKhoan"] == null)
+{
+
+<ul class="header-links pull-right">
+    <li><i class="fa fa-sign-in"></i>@Html.ActionLink("Đăng ký", "DangKy1", "DangKyDangNhap")</li>
+    <li><i class="fa fa-unlock"></i>@Html.ActionLink("Đăng nhập", "DangNhap", "DangKyDangNhap")</li>
+</ul>
+}
+else
+{
+
+    <ul class="header-links pull-right">
+        <li style="color:white"> Xin chào @taiKhoan.TenKhachHang </li>
+        <li style="color:white"> @Html.ActionLink("Đăng xuất","DangXuat","DangKyDangNhap") </li>
+    </ul>
+}

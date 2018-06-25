@@ -17,6 +17,11 @@ namespace WebLaptop3.Controllers
             return View();
         }
 
+        public PartialViewResult DKDNPartial()
+        {
+            return PartialView();
+        }
+
         [HttpGet] // load lại view
         public ActionResult DangKy()
         {
@@ -25,10 +30,13 @@ namespace WebLaptop3.Controllers
         [HttpPost]// lấy dữ liệu truyền vào KhachHang
         public ActionResult DangKy(KhachHang kh)
         {
-            db.KhachHangs.Add(kh);
+            if (ModelState.IsValid) {
+                db.KhachHangs.Add(kh);
 
-            db.SaveChanges();
-            ViewBag.ThongBao = "Đăng ký thành công";
+                db.SaveChanges();
+                ViewBag.ThongBao = "Đăng ký thành công";
+            }
+           
             return View();
         }
         [HttpGet]
@@ -66,12 +74,31 @@ namespace WebLaptop3.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.KhachHangs.Add(kh);
-
-                db.SaveChanges();
-                ViewBag.ThongBao = "Đăng ký thành công";
+                if (kiemTraTaiKhoan(kh.TaiKhoan))
+                {
+                    ModelState.AddModelError("", "Tên tài khoản đã tồn tại!");
+                }
+                else
+                {
+                    db.KhachHangs.Add(kh);
+                    db.SaveChanges();
+                    ViewBag.ThongBao = "Đăng ký thành công";
+                }
             }
             return View();
+        }
+
+
+        public bool kiemTraTaiKhoan(string taiKhoan)
+        {
+            return db.KhachHangs.Count(n => n.TaiKhoan == taiKhoan) > 0;
+        }
+
+
+        public ActionResult DangXuat()
+        {
+            Session["TaiKhoan"] = null;
+            return RedirectToAction("Index", "Home");
         }
     }
 }

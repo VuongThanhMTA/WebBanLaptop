@@ -47,7 +47,7 @@
         [StringLength(30)]
         [Display(Name = "Email")]
         [Required(ErrorMessage = "{0}  không được trống")]
-        //[RegularExpression((@"^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"), ErrorMessage ="{0} không hợp lệ}")]
+        //[RegularExpression((@"^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"), ErrorMessage = "{0} không hợp lệ}")]
 
         public string Email { get; set; }
 
@@ -63,5 +63,7 @@
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }
+
+       
     }
 }

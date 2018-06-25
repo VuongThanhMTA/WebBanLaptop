@@ -1,0 +1,65 @@
+﻿
+
+@using PagedList.Mvc
+@using PagedList
+@model IPagedList<WebLaptop3.Models.Data.Laptop>
+
+@{
+    ViewBag.Title = "KetQuaTimKiem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Kết quả tìm kiếm </h2>
+<div>@ViewBag.ThongBaoTimKiem</div>
+
+<div id="store" class="col-md-9" style="margin-left:100px;margin-top:100px">
+    <!-- store products -->
+    <div class="row">
+        <!-- product -->
+
+        @foreach (var item in Model)
+        {
+
+
+            <div class="product" style="float:left ; width:150px; height:250px;margin-right:10px;margin-bottom:50px">
+                <div class="product-img">
+                    <a href="@Url.Action("DetailLaptop","Laptop", new {@MaLaptop = @item.MaLaptop })">  <img src="@Url.Content("~/Content/Admin/img/"+item.Anh)" width="150" height="100"></a>
+                </div>
+                <div class="product-body">
+
+                    <h6 class="product-name">
+                        @if (item.TenLaptop.Length > 14)
+                        {
+                            <a href="#">@item.TenLaptop.Substring(0, 9)...</a>
+                        }
+                        else
+                        {
+                            <a href="#">@item.TenLaptop</a>
+                        }
+
+                    </h6>
+                    <h6 class="product-price"> @item.Gia vnd</h6>
+                </div>
+                <div class="add-to-cart" style="width:150px;height:50px;margin-bottom:20px">
+                    @using (Html.BeginForm("ThemGioHang", "GioHang", new { @maLaptop = item.MaLaptop, @strUrl = Request.Url.ToString() }))
+                    {
+                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Mua</button>
+                    }
+                </div>
+            </div>
+        }
+
+        <!-- /product -->
+    </div>
+
+    <!-- /store products -->
+    <!-- store bottom filter -->
+    <div class="store-filter clearfix">
+        @*Tạo các trang*@
+        @Html.PagedListPager(Model, pageTemp => Url.Action("KetQuaTimKiem", new {@tuKhoa = ViewBag.TuKhoa, @loaiTimKiem = ViewBag.LoaiTK, pageTemp = pageTemp }), new PagedListRenderOptions()
+   {
+       //LiElementClasses = new List<string> { }
+   })
+    </div>
+    <!-- /store bottom filter -->
+</div>
