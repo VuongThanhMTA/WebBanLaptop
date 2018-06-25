@@ -187,12 +187,13 @@
     <Compile Include="Controllers\QuanlyLoaiLTController.cs" />
     <Compile Include="Controllers\QuanlynhaccController.cs" />
     <Compile Include="Controllers\QuanlysanphamController.cs" />
+    <Compile Include="Controllers\TimKiemController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Data\ChiTietHoaDon.cs" />
-    <Compile Include="Models\Data\GioHang.cs" />
+    <Compile Include="Models\Data_minh\GioHang.cs" />
     <Compile Include="Models\Data\HoaDon.cs" />
     <Compile Include="Models\Data\KhachHang.cs" />
     <Compile Include="Models\Data\Laptop.cs" />
@@ -208,14 +209,6 @@
     <Compile Include="Models\Data_minh\Quanlylaptop_minh.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\NewData\ChiTietHoaDon.cs" />
-    <Compile Include="Models\NewData\GioHang.cs" />
-    <Compile Include="Models\NewData\HoaDon.cs" />
-    <Compile Include="Models\NewData\KhachHang.cs" />
-    <Compile Include="Models\NewData\Laptop.cs" />
-    <Compile Include="Models\NewData\LoaiLaptop.cs" />
-    <Compile Include="Models\NewData\NhaCungCap.cs" />
-    <Compile Include="Models\NewData\QuanLyLaptopModel1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -1894,6 +1887,8 @@
     <Content Include="Views\QuanlyLoaiLT\ThemMoi.cshtml" />
     <Content Include="Views\QuanlyLoaiLT\ChinhSua.cshtml" />
     <Content Include="Views\QuanlyLoaiLT\Xoa.cshtml" />
+    <Content Include="Views\TimKiem\KetQuaTimKiem.cshtml" />
+    <Content Include="Views\DangKyDangNhap\DKDNPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

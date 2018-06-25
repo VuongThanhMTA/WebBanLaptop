@@ -2,7 +2,7 @@
 
 @using PagedList.Mvc
 @using PagedList
-@model IPagedList<WebLaptop3.Models.Data.Laptop>
+@model IPagedList<WebLaptop3.Models.Data_minh.Laptop>
 
 @{
     ViewBag.Title = "KetQuaTimKiem";
@@ -56,7 +56,7 @@
     <!-- store bottom filter -->
     <div class="store-filter clearfix">
         @*Tạo các trang*@
-        @Html.PagedListPager(Model, pageTemp => Url.Action("KetQuaTimKiem", new {@tuKhoa = ViewBag.TuKhoa, @loaiTimKiem = ViewBag.LoaiTK, pageTemp = pageTemp }), new PagedListRenderOptions()
+        @Html.PagedListPager(Model, page => Url.Action("KetQuaTimKiem", new { page = page, @tuKhoa = ViewBag.TuKhoa }), new PagedListRenderOptions()
    {
        //LiElementClasses = new List<string> { }
    })

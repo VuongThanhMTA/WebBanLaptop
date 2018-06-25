@@ -1,7 +1,7 @@
 ﻿
-CREATE DATABASE QuanLyBanLaptop
+CREATE DATABASE QuanLyBanLaptopNew
 GO 
-USE QuanLyBanLaptop
+USE QuanLyBanLaptopNew
 
 GO 
 CREATE TABLE LoaiLaptop(

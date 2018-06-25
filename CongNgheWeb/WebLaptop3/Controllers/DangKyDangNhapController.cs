@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using WebLaptop3.Models.Data;
+using WebLaptop3.Models.Data_minh;
 
 namespace WebLaptop3.Controllers
 {
     public class DangKyDangNhapController : Controller
     {
-        QuanLyLaptopNewModel db = new QuanLyLaptopNewModel();
+        Quanlylaptop_minh db = new Quanlylaptop_minh();
 
         // GET: DangKyDangNhap
         public ActionResult Index()
@@ -31,7 +31,7 @@ namespace WebLaptop3.Controllers
         public ActionResult DangKy(KhachHang kh)
         {
             if (ModelState.IsValid) {
-                db.KhachHangs.Add(kh);
+                db.KhachHang.Add(kh);
 
                 db.SaveChanges();
                 ViewBag.ThongBao = "Đăng ký thành công";
@@ -51,7 +51,7 @@ namespace WebLaptop3.Controllers
             String sTaiKhoan = f["txtTaiKhoan"].ToString();
             String sMatKhau = f["txtPassword"].ToString();
 
-            KhachHang kh = db.KhachHangs.SingleOrDefault(n => n.TaiKhoan == sTaiKhoan && n.MatKhau == sMatKhau);
+            KhachHang kh = db.KhachHang.SingleOrDefault(n => n.TaiKhoan == sTaiKhoan && n.MatKhau == sMatKhau);
             if (kh != null)
             {
                 ViewBag.ThongBao = "Đăng nhập thành công";
@@ -80,7 +80,7 @@ namespace WebLaptop3.Controllers
                 }
                 else
                 {
-                    db.KhachHangs.Add(kh);
+                    db.KhachHang.Add(kh);
                     db.SaveChanges();
                     ViewBag.ThongBao = "Đăng ký thành công";
                 }
@@ -91,7 +91,7 @@ namespace WebLaptop3.Controllers
 
         public bool kiemTraTaiKhoan(string taiKhoan)
         {
-            return db.KhachHangs.Count(n => n.TaiKhoan == taiKhoan) > 0;
+            return db.KhachHang.Count(n => n.TaiKhoan == taiKhoan) > 0;
         }
 
 

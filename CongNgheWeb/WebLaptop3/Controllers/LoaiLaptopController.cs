@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using WebLaptop3.Models.Data;
+using WebLaptop3.Models.Data_minh;
 
 namespace WebLaptop3.Controllers
 {
     public class LoaiLaptopController : Controller
     {
         // GET: LoaiLaptop
-        QuanLyLaptopNewModel db = new QuanLyLaptopNewModel();
+        Quanlylaptop_minh db = new Quanlylaptop_minh();
 
         public ActionResult LoaiLaptopPartial()
         {
-            return PartialView(db.LoaiLaptops.ToList());
+            return PartialView(db.LoaiLaptop.ToList());
         }
 
     }

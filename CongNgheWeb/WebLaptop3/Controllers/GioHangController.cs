@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using WebLaptop3.Models.Data;
+using WebLaptop3.Models.Data_minh;
 //using WebLaptop3.Models.NewData;
 
 namespace WebLaptop3.Controllers
 {
     public class GioHangController : Controller
     {
-        QuanLyLaptopNewModel db = new QuanLyLaptopNewModel();
+        Quanlylaptop_minh db = new Quanlylaptop_minh();
 
         //Lấy giỏ hàng
         public List<GioHang> LayGioHang()
@@ -44,7 +44,7 @@ namespace WebLaptop3.Controllers
         public ActionResult ThemGioHang(int maLaptop, String strUrl)
         {
             // kiểm tra xem trong csdl có tồn tại sản phẩm muốn thêm hay k
-            Laptop laptop = db.Laptops.SingleOrDefault(n => n.MaLaptop == maLaptop);
+            Laptop laptop = db.Laptop.SingleOrDefault(n => n.MaLaptop == maLaptop);
             if (laptop == null)
             {
                 Response.StatusCode = 404;
@@ -75,7 +75,7 @@ namespace WebLaptop3.Controllers
         {
 
             //kiểm tra malaptop
-            Laptop lapTop = db.Laptops.SingleOrDefault(n => n.MaLaptop == maSP);
+            Laptop lapTop = db.Laptop.SingleOrDefault(n => n.MaLaptop == maSP);
             if (lapTop == null)
             {
                 Response.StatusCode = 404;
@@ -98,7 +98,7 @@ namespace WebLaptop3.Controllers
         public ActionResult XoaGioHang(int maSP)
         {
             //kiểm tra malaptop
-            Laptop lapTop = db.Laptops.SingleOrDefault(n => n.MaLaptop == maSP);
+            Laptop lapTop = db.Laptop.SingleOrDefault(n => n.MaLaptop == maSP);
             if (lapTop == null)
             {
                 Response.StatusCode = 404;
@@ -201,7 +201,7 @@ namespace WebLaptop3.Controllers
             ddh.NgayGiaoHang = DateTime.Now;
             ddh.TinhTrang = "Tốt";
             ddh.DaThanhToan = 0;
-            db.HoaDons.Add(ddh);
+            db.HoaDon.Add(ddh);
             db.SaveChanges();
             //Thêm chi tiết đơn hàng
             foreach (var item in gh)
@@ -211,7 +211,7 @@ namespace WebLaptop3.Controllers
                 ctDH.MaLaptop = item.iMaLaptop;
                 ctDH.SoLuong = item.iSoLuong;
                 ctDH.DonGia = (int)item.dDonGia;
-                db.ChiTietHoaDons.Add(ctDH);
+                db.ChiTietHoaDon.Add(ctDH);
             }
             db.SaveChanges();
             return RedirectToAction("Index", "Home");
