@@ -1,0 +1,53 @@
+﻿@using WebLaptop3.Models.Data
+@model List<GioHang>
+@{
+    ViewBag.Title = "NguoiDungSuaGioHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Giỏ hàng</h2>
+
+<table border="1" style="margin-left:10px;width:100%">
+    <tr>
+        <td> Mã </td>
+
+        <td> Tên</td>
+
+        <td> Ảnh </td>
+
+        <td>Giá </td>
+
+        <td> Số Lương </td>
+
+        <td> Thành tiền</td>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.iMaLaptop</td>
+
+            <td>@item.sTenLaptop</td>
+
+            <td> <img src="@Url.Content("~/Content/Admin/img/"+item.sAnhBia)" width="100" height="100" /> </td>
+
+            <td>
+                @string.Format("{0:0,0}", item.dDonGia) VND
+            </td>
+            @using (Html.BeginForm("CapNhatGioHang", "GioHang",new { @maSP = item.iMaLaptop }))
+            {
+                <td>@Html.TextBox("txtSoLuong",@item.iSoLuong)</td>
+                   
+                <td> @string.Format("{0:0,0}", item.ThanhTien) VND</td>
+
+                <td> <input type="submit" value="Cập nhật" />
+                   <br/>
+                    @Html.ActionLink("Xóa","XoaGioHang", new { @maSP = item.iMaLaptop})
+                </td>
+
+            }
+        </tr>
+
+    }
+</table>

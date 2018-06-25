@@ -11,13 +11,13 @@ namespace WebLaptop3.Models.Data
     {
         [Key]
         [Column(Order = 0)]
-        [StringLength(15)]
-        public string MaHoaDon { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int MaHoaDon { get; set; }
 
         [Key]
         [Column(Order = 1)]
-        [StringLength(15)]
-        public string MaLaptop { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int MaLaptop { get; set; }
 
         public int? SoLuong { get; set; }
 

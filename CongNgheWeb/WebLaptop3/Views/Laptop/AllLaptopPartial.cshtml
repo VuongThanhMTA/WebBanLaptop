@@ -1,5 +1,5 @@
 ﻿
-@using WebLaptop3.Models.NewData;
+@using WebLaptop3.Models.Data;
 @using PagedList;
 @using PagedList.Mvc;
 @model PagedList<Laptop>
@@ -86,7 +86,10 @@
                                     </div>*@
                             </div>
                             <div class="add-to-cart" style="width:150px;height:50px;margin-bottom:20px">
-                                <button class="add-to-cart-btn" style=""><i class="fa fa-shopping-cart"></i> Mua</button>
+                                @using (Html.BeginForm("ThemGioHang", "GioHang", new { @maLaptop = item.MaLaptop, @strUrl = Request.Url.ToString() }))
+                                {
+                                    <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Mua</button>
+                                }
                             </div>
                         </div>
                     }

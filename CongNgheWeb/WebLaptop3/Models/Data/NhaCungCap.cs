@@ -16,8 +16,7 @@ namespace WebLaptop3.Models.Data
         }
 
         [Key]
-        [StringLength(15)]
-        public string MaNhaCungCap { get; set; }
+        public int MaNhaCungCap { get; set; }
 
         [StringLength(50)]
         public string TenNhaCungCap { get; set; }

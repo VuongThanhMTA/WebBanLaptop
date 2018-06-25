@@ -16,11 +16,9 @@ namespace WebLaptop3.Models.Data
         }
 
         [Key]
-        [StringLength(15)]
-        public string MaHoaDon { get; set; }
+        public int MaHoaDon { get; set; }
 
-        [StringLength(15)]
-        public string MaKhachHang { get; set; }
+        public int? MaKhachHang { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime? NgayDatHang { get; set; }

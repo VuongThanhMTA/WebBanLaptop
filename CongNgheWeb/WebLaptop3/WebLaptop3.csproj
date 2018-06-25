@@ -189,12 +189,13 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Data\ChiTietHoaDon.cs" />
+    <Compile Include="Models\Data\GioHang.cs" />
     <Compile Include="Models\Data\HoaDon.cs" />
     <Compile Include="Models\Data\KhachHang.cs" />
     <Compile Include="Models\Data\Laptop.cs" />
     <Compile Include="Models\Data\LoaiLaptop.cs" />
     <Compile Include="Models\Data\NhaCungCap.cs" />
-    <Compile Include="Models\Data\QuanLyBanLaptopModel.cs" />
+    <Compile Include="Models\Data\QuanLyLaptopNewModel.cs" />
     <Compile Include="Models\Data_minh\ChiTietHoaDon.cs" />
     <Compile Include="Models\Data_minh\HoaDon.cs" />
     <Compile Include="Models\Data_minh\KhachHang.cs" />
@@ -1877,6 +1878,7 @@
     <Content Include="Views\Quanlysanpham\ThemMoi.cshtml" />
     <Content Include="Views\Quanlysanpham\ChinhSua.cshtml" />
     <Content Include="Views\Quanlysanpham\Xoa.cshtml" />
+    <Content Include="Views\GioHang\NguoiDungSuaGioHang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

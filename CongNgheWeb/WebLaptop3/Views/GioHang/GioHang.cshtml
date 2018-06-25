@@ -1,4 +1,4 @@
-﻿@using WebLaptop3.Models.NewData
+﻿@using WebLaptop3.Models.Data
 @model List<GioHang>
 @{
     ViewBag.Title = "GioHang";
@@ -7,7 +7,7 @@
 
 <h2>Giỏ hàng</h2>
 
-<table border="1" style="margin-left:10px;width:100%">
+<table border="1" style="margin-left:10px;width:1000px">
     <tr>
         <td> Mã </td>
 
@@ -30,15 +30,25 @@
 
             <td>@item.sTenLaptop</td>
 
-            <td> <img src="@Url.Content("~/Content/Admin/img/"+item.sAnhBia)" width="100" height="100" /> </td>
+            <td> <a href="@Url.Action("DetailLaptop","Laptop", new {@MaLaptop = @item.iMaLaptop })"> <img src="@Url.Content("~/Content/Admin/img/"+item.sAnhBia)" width="100" height="100" /> </a> </td>
 
             <td>
                 @string.Format("{0:0,0}", item.dDonGia) VND
-             </td>
+            </td>
             <td> @item.iSoLuong</td>
 
             <td> @string.Format("{0:0,0}", item.ThanhTien) VND</td>
-        </tr>
 
+        </tr>
+        <tr>
+            <td colspan="6" style="text-align:right">
+                @Html.ActionLink("Sửa giỏ hàng", "NguoiDungSuaGioHang")
+            </td>
+        </tr>
     }
 </table>
+
+@using (Html.BeginForm("DatHang", "GioHang"))
+{
+    <input type="submit" , value="Đặt hàng" style="cursor:pointer; margin-left:500px;margin-top:10px" class="btn btn-danger" />
+}

@@ -16,8 +16,7 @@ namespace WebLaptop3.Models.Data
         }
 
         [Key]
-        [StringLength(15)]
-        public string MaLoaiLaptop { get; set; }
+        public int MaLoaiLaptop { get; set; }
 
         [StringLength(50)]
         public string TenLoaiLaptop { get; set; }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using WebLaptop3.Models.NewData;
+using WebLaptop3.Models.Data;
 using PagedList;
 using PagedList.Mvc;
 
@@ -12,7 +12,7 @@ namespace WebLaptop3.Controllers
     public class LaptopController : Controller
     {
         // GET: Laptop
-        QuanLyLaptopModel1 db = new QuanLyLaptopModel1();
+        QuanLyLaptopNewModel db = new QuanLyLaptopNewModel();
         public ActionResult Index()
         {
             return View();
@@ -24,22 +24,24 @@ namespace WebLaptop3.Controllers
             return PartialView(listLaptop);
         }
 
-        public PartialViewResult ListLaptopPartial(String maLoaiLaptop)
+        public PartialViewResult ListLaptopPartial(int maLoaiLaptop)
         {
             var listLaptop = db.Laptops.Where(n => n.MaLoaiLaptop == maLoaiLaptop).Take(5).ToList();
-            
+
             return PartialView(listLaptop);
 
         }
 
-        public PartialViewResult AllLaptopPartial(int? pageTemp) {
-            int pageSize = 8;
+        public PartialViewResult AllLaptopPartial(int? pageTemp)
+        {
+            int pageSize = 10;
             int pageNumber = pageTemp ?? 1;
-            
+
             return PartialView(db.Laptops.ToList().OrderBy(a => a.TenLaptop).ToPagedList(pageNumber, pageSize));
         }
 
-        public ActionResult DetailLaptop(String maLaptop) {
+        public ActionResult DetailLaptop(int maLaptop)
+        {
             Laptop laptop = db.Laptops.SingleOrDefault(n => n.MaLaptop == maLaptop);
             return View(laptop);
         }
